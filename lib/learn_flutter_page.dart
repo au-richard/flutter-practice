@@ -8,6 +8,7 @@ class LearnFlutterPage extends StatefulWidget {
 }
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  bool isSwitch = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +24,13 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
       ),
       body: Column(
         children: [
-          Image.asset("images/einstein.jpg"),
-          // const SizedBox(
-          //   height: 10,
-          // ),
+          Image.asset(
+            "images/einstein.jpg",
+            height: 150,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
           const Divider(
             color: Colors.black,
           ),
@@ -62,6 +66,33 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
             child: const Text("Text Button"),
           ),
+          GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () {
+              debugPrint("This is the row.");
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.blue,
+                ),
+                Text("Row Widget"),
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.blue,
+                ),
+              ],
+            ),
+          ),
+          Switch(
+              value: isSwitch,
+              onChanged: (bool newBool) {
+                setState(() {
+                  isSwitch = newBool;
+                });
+              })
         ],
       ),
     );
