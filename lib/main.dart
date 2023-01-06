@@ -55,6 +55,7 @@ class _RootPageState extends State<RootPage> {
             currentPage = index;
           });
         },
+        selectedIndex: currentPage,
       ),
     );
   }
