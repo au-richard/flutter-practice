@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class RootPage extends StatefulWidget {
-//   const RootPage({Key? key}) : super(key: key);
+class RootPage extends StatefulWidget {
+  const RootPage({Key? key}) : super(key: key);
 
-//   @override
-//   State<RootPage> createState() => _RootPageState();
-// }
+  @override
+  State<RootPage> createState() => _RootPageState();
+}
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
