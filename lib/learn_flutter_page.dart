@@ -103,22 +103,24 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
               ),
             ),
             Switch(
-                value: isSwitch,
-                onChanged: (bool newBool) {
-                  setState(() {
-                    isSwitch = newBool;
-                  });
-                }),
+              value: isSwitch,
+              onChanged: (bool newBool) {
+                setState(() {
+                  isSwitch = newBool;
+                });
+              },
+            ),
             Checkbox(
-                value: isCheckBox,
-                onChanged: (bool? newBool) {
-                  setState(() {
-                    isCheckBox = newBool;
-                  });
-                }),
+              value: isCheckBox,
+              onChanged: (bool? newBool) {
+                setState(() {
+                  isCheckBox = newBool;
+                });
+              },
+            ),
             Image.network(
               "https://upload.wikimedia.org/wikipedia/en/8/86/Einstein_tongue.jpg",
-            ),
+            )
           ],
         ),
       ),
